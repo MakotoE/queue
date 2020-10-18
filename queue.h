@@ -21,7 +21,7 @@ public:
 		}
 	}
 
-	Queue(const Queue<int>& queue) : Queue() {
+	Queue(const Queue<T>& queue) : Queue() {
 		reserve(std::min(queue._capacity, queue._front + queue._size));
 
 		for (size_t i = 0; i < queue._size; ++i) {
