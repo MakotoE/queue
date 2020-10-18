@@ -10,7 +10,5 @@ set(
 
 add_subdirectory(tests)
 
-add_executable(queue main.cpp ${SOURCES})
-
 add_library(libqueue STATIC ${SOURCES})
 set_target_properties(libqueue PROPERTIES LINKER_LANGUAGE CXX)
