@@ -1,24 +1,6 @@
 #include <gtest/gtest.h>
 #include "../queue.h"
 
-TEST(Queue, front) {
-	Queue<int> queue;
-	EXPECT_THROW(queue.front(), std::runtime_error);
-	queue.pushBack(0);
-	EXPECT_EQ(queue.front(), 0);
-	queue.pushBack(1);
-	EXPECT_EQ(queue.front(), 0);
-}
-
-TEST(Queue, back) {
-	Queue<int> queue;
-	EXPECT_THROW(queue.back(), std::runtime_error);
-	queue.pushBack(0);
-	EXPECT_EQ(queue.back(), 0);
-	queue.pushBack(1);
-	EXPECT_EQ(queue.back(), 1);
-}
-
 TEST(Queue, pushBack) {
 	Queue<int> queue;
 	EXPECT_EQ(queue, Queue<int>());

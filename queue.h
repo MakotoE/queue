@@ -29,22 +29,6 @@ public:
 		}
 	}
 
-	T& front() const {
-		if (_size == 0) {
-			throw std::runtime_error("count is 0");
-		}
-
-		return _array[_front];
-	}
-
-	T& back() const {
-		if (_size == 0) {
-			throw std::runtime_error("count is 0");
-		}
-
-		return _array[(_front + _size - 1) % _capacity];
-	}
-
 	size_t size() const {
 		return _size;
 	}
